@@ -57,3 +57,37 @@ En este caso se ha escogido el atributo famrel(Calidad de las relaciones familia
 ## 2.Extracción de Reglas
 
 Se ha realizado una primera ejecución con la base de datos tal y como se ha explicado en los apartados anteriores. En esta primera ejecución parece ser que tenemos varios itemset muy frecuentes:
+
+![alt tag](https://github.com/BesayMontesdeoca/DataMiningR/blob/master/AsociacionReglas/itemsetsFrecuentes.PNG)
+
+Observamos que los itemsets Pstatus=T, schoolsup=no, higher=yes, famrelVeryBad=FALSE, famrelBad=FALSE, entre otras poseen soportes muy altos, en torno a 0.95, lo que ocasionarán que aparecerán en muchas de las reglas que extraeremos. 
+
+Efectivamente después de generar todas las reglas ejecutando el algoritmo de Apriori con un soporte de 0.5 y una confianza de 0.8, y después de eliminar las reglas redundantes, obtenemos unas 227 reglas donde en la mayoría aparecen los items destacados anteriormente. 
+
+
+| rules | support | confidence | lift |
+|-------|---------|------------|------|
+{internet=yes,romantic=no} => {famrelVeryBad=FALSE} | 0.53 | 0.99 | 1.011 |
+{nursery=yes,romantic=no} => {famrelVeryBad=FALSE} | 0.51 | 0.99 | 1.010 |
+{age=younger,romantic=no} => {famrelVeryBad=FALSE} | 0.50 | 0.99 | 1.010 |
+{romantic=no} => {famrelVeryBad=FALSE}
+0.65
+0.98
+1.009
+{internet=yes,Dalc=very-low} => {famrelVeryBad=FALSE}
+0.56
+0.98
+1.007
+{address=U,nursery=yes,internet=yes} => {famrelVeryBad=FALSE}
+0.53
+0.98
+1.006
+{traveltime=<15 min,nursery=yes} => {famrelVeryBad=FALSE}
+0.51
+0.98
+1.005
+{age=younger,address=U,Pstatus=T} => {famrelVeryBad=FALSE}
+0.50
+0.98
+1.005
+
