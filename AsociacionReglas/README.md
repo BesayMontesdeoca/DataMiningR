@@ -4,17 +4,16 @@ El objetivo de esta práctica es realizar un análisis sobre una base de datos u
 
 ## 1.Descripción y preprocesamiento de la base de datos
 
-**a. Descripción.**
-
-El dataset que se utilizará para aplicar las distintas técnicas pertenecientes al apartado de las Reglas de Asociación fue extraído de  repositorio gratis UCI. Se intentó escoger una base de datos que recogiese información fácil de entender, es decir, se evitó escoger bases de datos donde se ha reunido información más compleja como por ejemplo la eritema, el fenómeno koebner, las pápulas foliculares como es en el caso del dataset Dermatology. 
+**a. Descripción.**<return>
+El dataset que se utilizará para aplicar las distintas técnicas pertenecientes al apartado de las Reglas de Asociación fue extraído de  repositorio gratis UCI. Se intentó escoger una base de datos que recogiese información fácil de entender, es decir, se evitó escoger bases de datos donde se ha reunido información más compleja como por ejemplo la eritema, el fenómeno koebner, las pápulas foliculares como es en el caso del dataset Dermatology.<return> 
 En concreto la base de datos que se ha escogido se llama Student Performance, cuyos datos abordan el logro estudiantil de la educació  secundaria de dos escuelas portuguesas. Los atributos de los datos incluyen calificaciones de los estudiantes, características demográficas y sociales los cuales fueron recopilados mediante el uso de informes escolares y cuestionarios.
 
-**b. Descripción de los atributos.**
-La base de datos en un principio consta de 33 atributos que se describen a continuación: 
-**school:** Escuela del estudiante (binario: "GP" - Gabriel Pereira o "MS" - Mousinho da Silveira)
-**sex:** Sexo del estudiante (binario: "F" - femenino "M" - masculino)
-**age:** Edad del estudiante (numérica: de 15 a 22)
-**address:** Tipo de domicilio del estudiante (binario: "U" - urbano o "R" - rural)
+**b. Descripción de los atributos.**<return>
+La base de datos en un principio consta de 33 atributos que se describen a continuación:<return> 
+**school:** Escuela del estudiante (binario: "GP" - Gabriel Pereira o "MS" - Mousinho da Silveira)<return>
+**sex:** Sexo del estudiante (binario: "F" - femenino "M" - masculino)<return>
+**age:** Edad del estudiante (numérica: de 15 a 22)<return>
+**address:** Tipo de domicilio del estudiante (binario: "U" - urbano o "R" - rural)<return>
 **famsize:** Tamaño de la familia (binario: "LE3" - menor o igual a 3 o "GT3" - mayor que 3)
 **Pstatus:** Estado de cohabitación de los padres (binario: "T" - viven juntos o "A" - aparte)
 **Medu:** Educación de la madre (numérica: 0 - ninguna, 1 - educación primaria (4º grado), 2 - 5º a 9º grado, 3 - educación secundaria o 4 - educación superior)
