@@ -46,33 +46,4 @@ La base de datos en un principio consta de 33 atributos que se describen a conti
 
 Para aplicar las distintas técnicas no se trabajará con la totalidad de los atributos, se descartarán aquellos que de primeras parece que no ofrecen información útil y relevante. Por ejemplo en este caso se eliminaron los atributos school, failures, reason, paid, G1 y G2 (se ha dejado G3 puesto que representa el rendimiento final del alumno).
 
-**c. Creación de los intervalos y transformación de los atributos.**<br />
-Nuestra base de datos posee muchos ítems numéricos, y por lo tanto previamente debemos realizar dos tareas de preparación de los datos. La primera de ellas es la transformación de los datos de aquellos atributos que en un principio se muestran de forma numérica pero que realmente son categóricos, y por tanto debemos transformarlos a factores. Un ejemplo de estos atributos es famrel, en el que debemos transformar los valores 1 a “muy mala”, 2 a “mala”, 3  a “media”... etc.<br />
-En segundo lugar debemos tratar el caso de las variables que presentan distribuciones numéricas como por ejemplo la edad o las notas finales. Para estas es necesario establecer intervalos y transformarlas a la clase ordered factor.
-
-**d. Incorporación de los Ítems negativos.** <br />
-Seguidamente para realizar también un análisis por grupos de las reglas, se añadirá un solo item negativo para evitar una explosión de combinaciones al aplicar el método Apriori. Para añadir los ítems negativos básicamente tenemos que reemplazar la variable en cuestión por tantas variables nuevas como posibles valores podía tomar la variable original. En las variables nuevas los ejemplos tomarán como valor True si el ejemplo contiene el valor correspondiente y False en caso contrario.<br />
-En este caso se ha escogido el atributo famrel(Calidad de las relaciones familiares) para realizar el análisis en grupo. Esta variable puede tomar valores de very-bad, bad, medium, good y excellent, por tanto la remplazamos por las 5 variables correspondientes en el dataset.
-
-## 2.Extracción de Reglas
-
-Se ha realizado una primera ejecución con la base de datos tal y como se ha explicado en los apartados anteriores. En esta primera ejecución parece ser que tenemos varios itemset muy frecuentes:
-
 ![alt tag](https://github.com/BesayMontesdeoca/DataMiningR/blob/master/AsociacionReglas/itemsetsFrecuentes.PNG)
-
-Observamos que los itemsets Pstatus=T, schoolsup=no, higher=yes, famrelVeryBad=FALSE, famrelBad=FALSE, entre otras poseen soportes muy altos, en torno a 0.95, lo que ocasionarán que aparecerán en muchas de las reglas que extraeremos. 
-
-Efectivamente después de generar todas las reglas ejecutando el algoritmo de Apriori con un soporte de 0.5 y una confianza de 0.8, y después de eliminar las reglas redundantes, obtenemos unas 227 reglas donde en la mayoría aparecen los items destacados anteriormente. 
-
-
-| rules | support | confidence | lift |
-|-------|---------|------------|------|
-{internet=yes,romantic=no} => {famrelVeryBad=FALSE} | 0.53 | 0.99 | 1.011 |
-{nursery=yes,romantic=no} => {famrelVeryBad=FALSE} | 0.51 | 0.99 | 1.010 |
-{age=younger,romantic=no} => {famrelVeryBad=FALSE} | 0.50 | 0.99 | 1.010 |
-{romantic=no} => {famrelVeryBad=FALSE} | 0.65 | 0.98 | 1.009 |
-{internet=yes,Dalc=very-low} => {famrelVeryBad=FALSE} | 0.56 | 0.98 | 1.007 |
-{address=U,nursery=yes,internet=yes} => {famrelVeryBad=FALSE} | 0.53 | 0.98 | 1.006 |
-{traveltime=<15 min,nursery=yes} => {famrelVeryBad=FALSE} | 0.51 | 0.98 | 1.005 |
-{age=younger,address=U,Pstatus=T} => {famrelVeryBad=FALSE} | 0.50 | 0.98 | 1.005 |
-
