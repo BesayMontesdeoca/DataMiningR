@@ -70,24 +70,9 @@ Efectivamente después de generar todas las reglas ejecutando el algoritmo de Ap
 {internet=yes,romantic=no} => {famrelVeryBad=FALSE} | 0.53 | 0.99 | 1.011 |
 {nursery=yes,romantic=no} => {famrelVeryBad=FALSE} | 0.51 | 0.99 | 1.010 |
 {age=younger,romantic=no} => {famrelVeryBad=FALSE} | 0.50 | 0.99 | 1.010 |
-{romantic=no} => {famrelVeryBad=FALSE}
-0.65
-0.98
-1.009
-{internet=yes,Dalc=very-low} => {famrelVeryBad=FALSE}
-0.56
-0.98
-1.007
-{address=U,nursery=yes,internet=yes} => {famrelVeryBad=FALSE}
-0.53
-0.98
-1.006
-{traveltime=<15 min,nursery=yes} => {famrelVeryBad=FALSE}
-0.51
-0.98
-1.005
-{age=younger,address=U,Pstatus=T} => {famrelVeryBad=FALSE}
-0.50
-0.98
-1.005
+{romantic=no} => {famrelVeryBad=FALSE} | 0.65 | 0.98 | 1.009 |
+{internet=yes,Dalc=very-low} => {famrelVeryBad=FALSE} | 0.56 | 0.98 | 1.007 |
+{address=U,nursery=yes,internet=yes} => {famrelVeryBad=FALSE} | 0.53 | 0.98 | 1.006 |
+{traveltime=<15 min,nursery=yes} => {famrelVeryBad=FALSE} | 0.51 | 0.98 | 1.005 |
+{age=younger,address=U,Pstatus=T} => {famrelVeryBad=FALSE} | 0.50 | 0.98 | 1.005 |
 
