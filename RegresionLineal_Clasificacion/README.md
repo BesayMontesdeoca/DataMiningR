@@ -1,3 +1,2 @@
-<embed src="https://github.com/BesayMontesdeoca/DataMiningR/blob/master/RegresionLineal_Clasificacion/memoria.pdf">
-</embed>
+[Intro.pdf](https://github.com/BesayMontesdeoca/DataMiningR/blob/master/RegresionLineal_Clasificacion/memoria.pdf)
 
